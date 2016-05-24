@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Riddle</string>
+    <string name="title_activity_start_puzzle">StartPuzzle</string>
+</resources>

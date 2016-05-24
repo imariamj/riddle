@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/start_puzzle_id"
+    android:clickable="true"
+    tools:context="com.mj.riddled.PuzzleStart">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/puzzle1" />
+
+    <TextView
+        style="@style/StartPuzzle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center"
+        android:paddingTop="60dp"
+        android:text="Quiz start details" />
+
+    <TextView
+        android:id="@+id/startPuzzleTV_id"
+        style="@style/StartPuzzle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:paddingBottom="60dp"
+        android:text="Start Quiz" />
+
+</RelativeLayout>
