@@ -15,18 +15,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setCustomView(R.layout.action_bar_style);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayUseLogoEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
         setContentView(R.layout.activity_main);
 
         final List<Category> categoryType = DummyData.getCategories();
 
         ListView puzzleList = (ListView) findViewById(R.id.list_view_id);
-
         PuzzleAdapter adapter = new PuzzleAdapter(this, 0, categoryType);
-
         puzzleList.setAdapter(adapter);
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.puzzle_red);
+       // getSupportActionBar().setHomeButtonEnabled(false);
+//
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setCustomView(R.layout.action_bar_style);
     }
 
 }

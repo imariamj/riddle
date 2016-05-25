@@ -27,14 +27,11 @@ public class PuzzleAdapter extends ArrayAdapter<Category>{
         super(context, resource, data);
     }
 
-
     @Override
     public View getView(final int position, View rowView, ViewGroup parent){
         final Category category = getItem(position);
 
-        /**
-         * Inflate layout of each pf the rows on puzzle type list
-         */
+        //Inflate layout of each of the rows on puzzle type list
         if(rowView == null){
             rowView = LayoutInflater.from(getContext()).inflate(R.layout.puzzle_type_item, parent,false);
         }

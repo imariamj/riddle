@@ -1,5 +1,6 @@
 package com.mj.riddled;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,32 +19,43 @@ public class PuzzleStart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle_start);
+
         TextView startPuzzleTextView = (TextView) findViewById(R.id.startPuzzleTV_id);
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             categoryId = bundle.getInt(Constants.CATEGORY_ID);
         }
         if(categoryId == 1){
-            startPuzzleTextView.setText("Start History Quiz");
+            startPuzzleTextView.setText("How much do you know about\nBollywood?\n\nTest your knowledge with this quiz.");
         }
         if(categoryId == 2){
-            startPuzzleTextView.setText("Start Science Quiz");
+            startPuzzleTextView.setText("How much do you know about\n" +
+                    "Hollywood?\n\n" +
+                    "Test your knowledge with this quiz.");
         }
 
         if(categoryId == 3){
-            startPuzzleTextView.setText("Start Maths Quiz");
+            startPuzzleTextView.setText("How much do you know about\n" +
+                    "Cricket\n\n" +
+                    "Test your knowledge with this quiz.");
         }
 
         if(categoryId == 4){
-            startPuzzleTextView.setText("Start Current Affairs Quiz");
+            startPuzzleTextView.setText("How much do you know about\n" +
+                    "Science?\n\n" +
+                    "Test your knowledge with this quiz.");
         }
 
         if(categoryId == 5){
-            startPuzzleTextView.setText("Start Geography Quiz");
+            startPuzzleTextView.setText("How much do you know about\n" +
+                    "Geography?\n\n" +
+                    "Test your knowledge with this quiz.");
         }
 
         if(categoryId == 6){
-            startPuzzleTextView.setText("Start Art Quiz");
+            startPuzzleTextView.setText("How much do you know about\n" +
+                    "History?\n\n" +
+                    "Test your knowledge with this quiz.");
         }
 
         View startPuzzleView = findViewById(R.id.start_puzzle_id);
@@ -53,12 +65,14 @@ public class PuzzleStart extends AppCompatActivity {
                 Category category = DummyData.getCategory(categoryId);
                 GameData.startNewGame(category);
                 Intent intent = new Intent(PuzzleStart.this, QuestionsActivity.class);
-                intent.putExtra(Constants.CATEGORY_ID,categoryId);
+                intent.putExtra(Constants.CATEGORY_ID, categoryId);
                 startActivity(intent);
             }
         });
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.puzzle_red);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
     }
 
     @Override

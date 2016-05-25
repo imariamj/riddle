@@ -70,7 +70,7 @@ public class QuestionsActivity extends AppCompatActivity {
         });
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.puzzle_red);
+        getSupportActionBar().setIcon(R.drawable.bulb);
     }
 
     @Override
@@ -79,7 +79,7 @@ public class QuestionsActivity extends AppCompatActivity {
 
         builder.setTitle("Exit quiz?");
         builder.setMessage("This would make you exit the quiz.");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 Intent mainIntent = new Intent(QuestionsActivity.this, MainActivity.class);
                 startActivity(mainIntent);
@@ -102,6 +102,7 @@ public class QuestionsActivity extends AppCompatActivity {
             for (Option o: options) {
                 RadioButton rdbtn = new RadioButton(this);
                 rdbtn.setId((o.getId()));
+                rdbtn.setTextSize(16);
                 rdbtn.setText(o.getOptionText());
                 radioGroup.addView(rdbtn);
             }

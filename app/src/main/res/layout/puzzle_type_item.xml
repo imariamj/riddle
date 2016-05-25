@@ -10,7 +10,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/puzzle1" />
+        />
 
 
     <TextView

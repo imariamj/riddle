@@ -12,18 +12,19 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/puzzle1" />
+        android:src="@drawable/puzzle_pieces" />
 
     <TextView
+        android:id="@+id/startPuzzleTV_id"
         style="@style/StartPuzzle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:gravity="center"
+        android:gravity="center"
         android:paddingTop="60dp"
         android:text="Quiz start details" />
 
     <TextView
-        android:id="@+id/startPuzzleTV_id"
+
         style="@style/StartPuzzle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
