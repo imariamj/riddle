@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import com.mj.riddled.R;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
-import data.Option;
-import data.Question;
 import data.QuestionStatus;
 
 /**
@@ -32,10 +32,19 @@ public class AnswersAdapter extends ArrayAdapter<QuestionStatus>{
         }
 
         final TextView qText = (TextView) rowView.findViewById(R.id.questionAnsText_id);
-        final TextView ansText = (TextView) rowView.findViewById(R.id.answer_TVId);
+        final TextView correctAns = (TextView) rowView.findViewById(R.id.CorrectAnswer_TVId);
+        final TextView selectedAns = (TextView) rowView.findViewById(R.id.selectedAnswer_id);
 
         qText.setText(qs.getQuestion().getQuesText());
-        ansText.setText(qs.getQuestion().getCorrectAnswer().getOptionText());
+
+        if(qs.getSelectedAnswer().getId() == qs.getQuestion().getCorrectAnswer().getId()){
+            correctAns.setText(qs.getQuestion().getCorrectAnswer().getOptionText());
+        }
+        else {
+            correctAns.setText(qs.getQuestion().getCorrectAnswer().getOptionText());
+            selectedAns.setText(qs.getSelectedAnswer().getOptionText());
+            selectedAns.setVisibility(View.VISIBLE);
+        }
 
       return rowView;
     }

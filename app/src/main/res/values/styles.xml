@@ -18,12 +18,27 @@
     <style name="StartPuzzle">
         <item name="android:textColor">@color/darkerGrey</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textAllCaps">true</item>
         <item name="android:textSize">20sp</item>
     </style>
     <style name="QuestionText">
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="NextButton">
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
+
+    <style name="QuestionAnswer">
+        <item name="android:textStyle">italic</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

@@ -18,4 +18,13 @@
         android:topLeftRadius="8dp"
         android:topRightRadius="8dp" />
 
+    <gradient
+        android:angle="90"
+        android:centerColor="@color/colorPrimary"
+        android:centerX="15%"
+        android:endColor="@color/lightPrimary"
+        android:startColor="@color/colorPrimaryDark"
+        android:type="linear"
+        ></gradient>
+
 </shape>

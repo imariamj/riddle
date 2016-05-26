@@ -15,44 +15,40 @@ import data.GameData;
 public class PuzzleStart extends AppCompatActivity {
 
     int categoryId = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle_start);
-
         TextView startPuzzleTextView = (TextView) findViewById(R.id.startPuzzleTV_id);
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null){
+        if (bundle != null) {
             categoryId = bundle.getInt(Constants.CATEGORY_ID);
         }
-        if(categoryId == 1){
+        if (categoryId == 1) {
             startPuzzleTextView.setText("How much do you know about\nBollywood?\n\nTest your knowledge with this quiz.");
         }
-        if(categoryId == 2){
+        if (categoryId == 2) {
             startPuzzleTextView.setText("How much do you know about\n" +
                     "Hollywood?\n\n" +
                     "Test your knowledge with this quiz.");
         }
-
-        if(categoryId == 3){
+        if (categoryId == 3) {
             startPuzzleTextView.setText("How much do you know about\n" +
                     "Cricket\n\n" +
                     "Test your knowledge with this quiz.");
         }
-
-        if(categoryId == 4){
+        if (categoryId == 4) {
             startPuzzleTextView.setText("How much do you know about\n" +
                     "Science?\n\n" +
                     "Test your knowledge with this quiz.");
         }
-
-        if(categoryId == 5){
+        if (categoryId == 5) {
             startPuzzleTextView.setText("How much do you know about\n" +
                     "Geography?\n\n" +
                     "Test your knowledge with this quiz.");
         }
-
-        if(categoryId == 6){
+        if (categoryId == 6) {
             startPuzzleTextView.setText("How much do you know about\n" +
                     "History?\n\n" +
                     "Test your knowledge with this quiz.");
@@ -71,8 +67,6 @@ public class PuzzleStart extends AppCompatActivity {
         });
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
     }
 
     @Override

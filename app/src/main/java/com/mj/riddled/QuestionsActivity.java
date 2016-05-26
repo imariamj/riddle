@@ -38,17 +38,16 @@ public class QuestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
         Bundle extras = getIntent().getExtras();
-        if(extras != null){
+        if(extras != null) {
             categoryId = extras.getInt(Constants.CATEGORY_ID);
         }
         final Category category = DummyData.getCategory(categoryId);
         question = DummyData.getNextQuestion(category);
         TextView questionText = (TextView) findViewById(R.id.questionText_id);
-        if(question == null){
+        if (question == null) {
             Intent scoreIntent = new Intent(QuestionsActivity.this, ScoreActivity.class);
             startActivity(scoreIntent);
-        }
-        else{
+        } else {
             questionText.setText(question.getQuesText());
             addRadioButtons(question.getOptions());
         }
@@ -57,13 +56,13 @@ public class QuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int selectedOption = radioGroup.getCheckedRadioButtonId();
-                if(selectedOption > 0 ) {
+                if (selectedOption > 0) {
                     GameData.setAnswer(question, selectedOption);
                     Intent intent = new Intent(QuestionsActivity.this, QuestionsActivity.class);
                     intent.putExtra(Constants.CATEGORY_ID, categoryId);
                     startActivity(intent);
 
-                }else{
+                } else {
                     Toast.makeText(QuestionsActivity.this, "Please select an answer", Toast.LENGTH_LONG).show();
                 }
             }
@@ -73,10 +72,11 @@ public class QuestionsActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.drawable.bulb);
     }
 
+    // If device back button is pressed while playing the quiz,
+    // it gives an alert if the user wants to exit the quiz with Yes and Cancel options
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         builder.setTitle("Exit quiz?");
         builder.setMessage("This would make you exit the quiz.");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -96,10 +96,10 @@ public class QuestionsActivity extends AppCompatActivity {
     public void addRadioButtons(List<Option> options) {
 
         for (int row = 0; row < 1; row++) {
-             radioGroup = new RadioGroup(this);
+            radioGroup = new RadioGroup(this);
             radioGroup.setOrientation(LinearLayout.VERTICAL);
 
-            for (Option o: options) {
+            for (Option o : options) {
                 RadioButton rdbtn = new RadioButton(this);
                 rdbtn.setId((o.getId()));
                 rdbtn.setTextSize(16);
@@ -112,7 +112,6 @@ public class QuestionsActivity extends AppCompatActivity {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                     radioButton = (RadioButton) findViewById(checkedId);
-                    //Toast.makeText(QuestionsActivity.this, radioButton.getText(), Toast.LENGTH_LONG).show();
                 }
             });
         }

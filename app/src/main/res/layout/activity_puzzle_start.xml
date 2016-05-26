@@ -5,14 +5,9 @@
     android:layout_height="match_parent"
     android:id="@+id/start_puzzle_id"
     android:clickable="true"
-    tools:context="com.mj.riddled.PuzzleStart">
+    android:background="@drawable/gradient_start"
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/puzzle_pieces" />
+    tools:context="com.mj.riddled.PuzzleStart">
 
     <TextView
         android:id="@+id/startPuzzleTV_id"
@@ -23,8 +18,7 @@
         android:paddingTop="60dp"
         android:text="Quiz start details" />
 
-    <TextView
-
+    <Button
         style="@style/StartPuzzle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

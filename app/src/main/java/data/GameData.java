@@ -11,10 +11,10 @@ public class GameData {
     public static List<QuestionStatus> QUESTION_STATUS_LIST;
 
     /**
-     * On game start, reset the game and create a new list of question status for a given category
+     * On game start, resets the game and create a new list of question status for a given category
      *
      * @param cat
-     * @return
+     * @return list of questions for the given category
      */
     public static List<QuestionStatus> startNewGame(Category cat) {
         resetGame();
@@ -27,6 +27,12 @@ public class GameData {
         return QUESTION_STATUS_LIST;
     }
 
+    /**
+     * Sets the answer selected by user fro the list of options
+     *
+     * @param question
+     * @param selectedAnswer
+     */
     public static void setAnswer(Question question, int selectedAnswer) {
         if (QUESTION_STATUS_LIST != null && QUESTION_STATUS_LIST.size() > 0) {
             for (QuestionStatus questionStatus : QUESTION_STATUS_LIST) {
@@ -41,6 +47,11 @@ public class GameData {
         }
     }
 
+    /**
+     * Calculates score for a quiz based on the number of questions answered correctly
+     *
+     * @return score
+     */
     public static int calculateScore() {
         int score = 0;
         if (QUESTION_STATUS_LIST != null && QUESTION_STATUS_LIST.size() > 0) {
@@ -54,7 +65,7 @@ public class GameData {
     }
 
     /**
-     * to reset the game
+     * to reset the game by emptying the list QUESTION_STATUS_LIST
      */
     public static void resetGame() {
         QUESTION_STATUS_LIST = null;

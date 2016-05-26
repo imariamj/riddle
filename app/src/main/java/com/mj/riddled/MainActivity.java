@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
         ListView puzzleList = (ListView) findViewById(R.id.list_view_id);
         PuzzleAdapter adapter = new PuzzleAdapter(this, 0, categoryType);
         puzzleList.setAdapter(adapter);
-       // getSupportActionBar().setHomeButtonEnabled(false);
-//
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setCustomView(R.layout.action_bar_style);
     }
 
 }
