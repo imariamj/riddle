@@ -3,6 +3,7 @@ package com.mj.riddled;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.session.PlaybackState;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +27,10 @@ import data.GameData;
 import data.Option;
 import data.Question;
 
+/**
+ * It displays questions and the options for each of those questions.
+ * if all the questions for that category have been asked, it will take you to the ScoreActivity
+ */
 public class QuestionsActivity extends AppCompatActivity {
 
     Question question;
@@ -52,7 +57,19 @@ public class QuestionsActivity extends AppCompatActivity {
             addRadioButtons(question.getOptions());
         }
         Button nextButton = (Button) findViewById(R.id.next_question_id);
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        nextButton.setOnClickListener(nextQuestionListener());
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.bulb);
+    }
+
+    /**
+     * It returns next question.
+     * @return
+     */
+    @NonNull
+    private View.OnClickListener nextQuestionListener() {
+        return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int selectedOption = radioGroup.getCheckedRadioButtonId();
@@ -61,31 +78,30 @@ public class QuestionsActivity extends AppCompatActivity {
                     Intent intent = new Intent(QuestionsActivity.this, QuestionsActivity.class);
                     intent.putExtra(Constants.CATEGORY_ID, categoryId);
                     startActivity(intent);
-
                 } else {
-                    Toast.makeText(QuestionsActivity.this, "Please select an answer", Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuestionsActivity.this, R.string.select_answer_toast, Toast.LENGTH_LONG).show();
                 }
             }
-        });
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.bulb);
+        };
     }
 
-    // If device back button is pressed while playing the quiz,
-    // it gives an alert if the user wants to exit the quiz with Yes and Cancel options
+    /**
+     * If device back button is pressed while playing the quiz,
+     * it gives an alert if the user wants to exit the quiz with Yes and Cancel options
+     */
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Exit quiz?");
-        builder.setMessage("This would make you exit the quiz.");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setTitle(getString(R.string.exit_quiz_alert));
+        builder.setMessage(getString(R.string.exit_quiz_description));
+        builder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 Intent mainIntent = new Intent(QuestionsActivity.this, MainActivity.class);
+                mainIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(mainIntent);
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.dismiss();
             }
@@ -93,8 +109,11 @@ public class QuestionsActivity extends AppCompatActivity {
         builder.show();
     }
 
+    /**
+     * Adds radio buttons dynamically to display answers for each of the questions
+     * @param options
+     */
     public void addRadioButtons(List<Option> options) {
-
         for (int row = 0; row < 1; row++) {
             radioGroup = new RadioGroup(this);
             radioGroup.setOrientation(LinearLayout.VERTICAL);

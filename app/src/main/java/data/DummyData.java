@@ -356,22 +356,6 @@ public class DummyData {
         return categoryQuestions;
     }
 
-//    /**
-//     * Fetch a question based on question id
-//     *
-//     * @param questionId
-//     * @return question
-//     */
-//    public static Question getQuestion(int questionId) {
-//        List<Question> allQuestions = getQuestions();
-//        for (Question ques : allQuestions) {
-//            if (ques.getQuesId() == questionId) {
-//                return ques;
-//            }
-//        }
-//        return null;
-//    }
-
     /**
      * Fetches next not visited question in the current game
      * if game is not running, then start a new game and get the first not visited question
@@ -390,5 +374,19 @@ public class DummyData {
             }
         }
         return null;
+    }
+
+    /**
+     * Preparing start quiz text based on category
+     * @param category
+     * @return start quiz text
+     */
+    public static String getCategoryDesc(Category category){
+        if(category != null){
+            return "How much do you know about\n"+ category.getName() +"?\n\nTest your knowledge with this quiz." +
+                    "";
+        }
+        return "";
+
     }
 }

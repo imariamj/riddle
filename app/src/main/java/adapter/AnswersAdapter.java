@@ -39,6 +39,7 @@ public class AnswersAdapter extends ArrayAdapter<QuestionStatus>{
 
         if(qs.getSelectedAnswer().getId() == qs.getQuestion().getCorrectAnswer().getId()){
             correctAns.setText(qs.getQuestion().getCorrectAnswer().getOptionText());
+            selectedAns.setVisibility(View.GONE);
         }
         else {
             correctAns.setText(qs.getQuestion().getCorrectAnswer().getOptionText());

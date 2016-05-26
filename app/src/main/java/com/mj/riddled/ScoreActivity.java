@@ -35,7 +35,7 @@ public class ScoreActivity extends AppCompatActivity {
                 scoreView.setText("You scored" + "\n" + (int) score + "/" + (int) totalQuestionCount + "\nBetter luck next time");
             }
         } else {
-            scoreView.setText("*There are no questions in this category*");
+            scoreView.setText(R.string.no_questions_in_cat);
         }
 
         // Answers list view implementation
@@ -45,13 +45,16 @@ public class ScoreActivity extends AppCompatActivity {
 
         //Back to main page
         Button backToMainMenuBtn = (Button) findViewById(R.id.another_game_btnid);
-        backToMainMenuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent backToMainIntent = new Intent(ScoreActivity.this, MainActivity.class);
-                startActivity(backToMainIntent);
-                finish();
-            }
-        });
+        if (backToMainMenuBtn != null) {
+            backToMainMenuBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent backToMainIntent = new Intent(ScoreActivity.this, MainActivity.class);
+                    backToMainIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    startActivity(backToMainIntent);
+                    finish();
+                }
+            });
+        }
     }
 }

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Riddle</string>
     <string name="title_activity_start_puzzle">StartPuzzle</string>
+    <string name="select_answer_toast">Please select an answer</string>
+    <string name="exit_quiz_alert">Exit quiz?</string>
+    <string name="exit_quiz_description">This would make you exit the quiz.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_questions_in_cat">*There are no questions in this category*</string>
 </resources>
