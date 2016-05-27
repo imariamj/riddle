@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/start_puzzle_id"
     android:clickable="true"
     android:background="@drawable/gradient_start"
     tools:context=".PuzzleStartActivity">
@@ -17,15 +16,11 @@
         android:paddingTop="60dp"
         android:text="Quiz start details" />
 
-    <TextView
-        style="@style/StartPuzzle"
-        android:layout_width="match_parent"
+    <Button
+        style="@style/NextButton"
+        android:id="@+id/start_puzzle_id"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:background="@android:color/transparent"
-        android:paddingBottom="60dp"
         android:text="Start Quiz" />
 
 </RelativeLayout>

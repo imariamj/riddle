@@ -79,7 +79,7 @@ public class QuestionsActivity extends AppCompatActivity {
                     intent.putExtra(Constants.CATEGORY_ID, categoryId);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(QuestionsActivity.this, R.string.select_answer_toast, Toast.LENGTH_LONG).show();
+                    Toast.makeText(QuestionsActivity.this, R.string.select_answer_toast, Toast.LENGTH_SHORT).show();
                 }
             }
         };

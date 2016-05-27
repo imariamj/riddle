@@ -335,6 +335,144 @@ public class DummyData {
             options40.add(new Option(3, "Harshan Tilakaratne"));
             options40.add(new Option(4, "None Of The Above"));
             QUESTION.add(new Question(40, "Kapil Dev's 432 (world) record breaking victim was?", getCategory(3), options40, options40.get(2)));
+
+            List<Option> options41 = new ArrayList<Option>();
+            options41.add(new Option(1, "Vatican"));
+            options41.add(new Option(2, "Iceland"));
+            options41.add(new Option(3, "Netherlands"));
+            options41.add(new Option(4, "Hungary"));
+            QUESTION.add(new Question(41, "Which country has the lowest population density of any country in Europe?", getCategory(5), options41, options41.get(1)));
+
+            List<Option> options42 = new ArrayList<Option>();
+            options42.add(new Option(1, "Cambodia"));
+            options42.add(new Option(2, "Thailand"));
+            options42.add(new Option(3, "Mynamar"));
+            options42.add(new Option(4, "Bhutan"));
+            QUESTION.add(new Question(42, "Angkor Wat, the largest religious monument in the world, is in which country?", getCategory(5), options42, options42.get(0)));
+
+            List<Option> options43 = new ArrayList<Option>();
+            options43.add(new Option(1, "Southern"));
+            options43.add(new Option(2, "Northern and Southern"));
+            options43.add(new Option(3, "Northern"));
+            options43.add(new Option(4, "None of the above"));
+            QUESTION.add(new Question(43, "Is the Tropic of Cancer in the northern or southern hemisphere?", getCategory(5), options43, options43.get(2)));
+
+            List<Option> options44 = new ArrayList<Option>();
+            options44.add(new Option(1, "Bangladesh"));
+            options44.add(new Option(2, "Nepal"));
+            options44.add(new Option(3, "Pakistan"));
+            options44.add(new Option(4, "China"));
+            QUESTION.add(new Question(44, "The Ganges flows through India and which other country?", getCategory(5), options44, options44.get(0)));
+
+            List<Option> options45 = new ArrayList<Option>();
+            options45.add(new Option(1, "Indian"));
+            options45.add(new Option(2, "Pacific"));
+            options45.add(new Option(3, "Arctic"));
+            options45.add(new Option(4, "Atlantic"));
+            QUESTION.add(new Question(45, "Which ocean lies on the east coast of the United States?", getCategory(5), options45, options45.get(3)));
+
+            List<Option> options46 = new ArrayList<Option>();
+            options46.add(new Option(1, "Prime Axis"));
+            options46.add(new Option(2, "Lambert Line"));
+            options46.add(new Option(3, "Prime Meridian"));
+            options46.add(new Option(4, "Greenwich"));
+            QUESTION.add(new Question(46, "What is the imaginary line called that connects the north and south pole?", getCategory(5), options46, options46.get(2)));
+
+            List<Option> options47 = new ArrayList<Option>();
+            options47.add(new Option(1, "Tropic of Cancer"));
+            options47.add(new Option(2, "Tropic of Capricorn"));
+            QUESTION.add(new Question(47, "The most northerly circle of latitude on the Earth at which the Sun may appear directly overhead at its culmination is called?", getCategory(5), options47, options47.get(0)));
+
+            List<Option> options48 = new ArrayList<Option>();
+            options48.add(new Option(1, "Nevada"));
+            options48.add(new Option(2, "Arizona"));
+            options48.add(new Option(3, "New Mexico"));
+            options48.add(new Option(4, "San Fransisco"));
+            QUESTION.add(new Question(48, "Which U.S. state is the Grand Canyon located in?", getCategory(5), options48, options48.get(1)));
+
+            List<Option> options49 = new ArrayList<Option>();
+            options49.add(new Option(1, "Indian Ocean"));
+            options49.add(new Option(2, "Atlantic Ocean"));
+            options49.add(new Option(3, "Pacific Ocean"));
+            options49.add(new Option(4, "Arctic Ocean"));
+            QUESTION.add(new Question(49, "Which is the largest body of water?", getCategory(5), options49, options49.get(2)));
+
+            List<Option> options50 = new ArrayList<Option>();
+            options50.add(new Option(1, "Maldives"));
+            options50.add(new Option(2, "Monaco"));
+            options50.add(new Option(3, "Tuvalu"));
+            options50.add(new Option(4, "Vatican City"));
+            QUESTION.add(new Question(50, "Which is the smallest country, measured by total land area?", getCategory(5), options50, options50.get(3)));
+
+            List<Option> options51 = new ArrayList<Option>();
+            options51.add(new Option(1, "1923"));
+            options51.add(new Option(2, "1938"));
+            options51.add(new Option(3, "1917"));
+            options51.add(new Option(4, "1914"));
+            QUESTION.add(new Question(51, "World War I began in which year?", getCategory(6), options51, options51.get(3)));
+
+            List<Option> options52 = new ArrayList<Option>();
+            options52.add(new Option(1, "France"));
+            options52.add(new Option(2, "Germany"));
+            options52.add(new Option(3, "Austria"));
+            options52.add(new Option(4, "Hungary"));
+            QUESTION.add(new Question(52, "Adolf Hitler was born in which country?", getCategory(6), options52, options52.get(2)));
+
+            List<Option> options53 = new ArrayList<Option>();
+            options53.add(new Option(1, "1973"));
+            options53.add(new Option(2, "Austin"));
+            options53.add(new Option(3, "Dallas"));
+            options53.add(new Option(4, "1958"));
+            QUESTION.add(new Question(53, "John F. Kennedy was assassinated in?", getCategory(6), options53, options53.get(2)));
+
+            List<Option> options54 = new ArrayList<Option>();
+            options54.add(new Option(1, "Johannes Gutenburg"));
+            options54.add(new Option(2, "Benjamin Franklin"));
+            options54.add(new Option(3, "Sir Isaac Newton"));
+            options54.add(new Option(4, "Martin Luther\n"));
+            QUESTION.add(new Question(54, "The first successful printing press was developed by this man.", getCategory(6), options54, options54.get(0)));
+
+            List<Option> options55 = new ArrayList<Option>();
+            options55.add(new Option(1, "The White Death"));
+            options55.add(new Option(2, "The Black Plague"));
+            options55.add(new Option(3, "Smallpox"));
+            options55.add(new Option(4, "The Bubonic Plague"));
+            QUESTION.add(new Question(55, "The disease that ravaged and killed a third of Europe's population in the 14th century is known as", getCategory(6), options55, options55.get(3)));
+
+            List<Option> options56 = new ArrayList<Option>();
+            options56.add(new Option(1, "Panipat"));
+            options56.add(new Option(2, "Troy"));
+            options56.add(new Option(3, "Waterloo"));
+            options56.add(new Option(4, "Monaco"));
+            QUESTION.add(new Question(56, "Napoleon was finally defeated at the battle known as?", getCategory(6), options56, options56.get(2)));
+
+            List<Option> options57 = new ArrayList<Option>();
+            options57.add(new Option(1, "Magellan"));
+            options57.add(new Option(2, "Cook"));
+            options57.add(new Option(3, "Marco"));
+            options57.add(new Option(4, "Sir Francis Drake"));
+            QUESTION.add(new Question(57, "Who was the first Western explorer to reach China?", getCategory(6), options57, options57.get(2)));
+
+            List<Option> options58 = new ArrayList<Option>();
+            options58.add(new Option(1, "Shah Jahan"));
+            options58.add(new Option(2, "Chandragupta Maurya"));
+            options58.add(new Option(3, "Humayun"));
+            options58.add(new Option(4, "Sher Shah Suri"));
+            QUESTION.add(new Question(58, "Who built the Grand Trunk Road?", getCategory(6), options58, options58.get(3)));
+
+            List<Option> options59 = new ArrayList<Option>();
+            options59.add(new Option(1, "Jawaharlal Nehru"));
+            options59.add(new Option(2, "M. K. Gandhi"));
+            options59.add(new Option(3, "Dr. Rajendra Prasad"));
+            options59.add(new Option(4, "Dr. S. Radhakrishnan"));
+            QUESTION.add(new Question(59, "Who was the first President of India?", getCategory(6), options59, options59.get(2)));
+
+            List<Option> options60 = new ArrayList<Option>();
+            options60.add(new Option(1, "8"));
+            options60.add(new Option(2, "10"));
+            options60.add(new Option(3, "5"));
+            options60.add(new Option(4, "18"));
+            QUESTION.add(new Question(60, "How many days did the battle of Mahabharata last?", getCategory(6), options60, options60.get(3)));
         }
         return QUESTION;
     }

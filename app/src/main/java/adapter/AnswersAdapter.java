@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.mj.riddled.R;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import data.QuestionStatus;
@@ -28,7 +26,7 @@ public class AnswersAdapter extends ArrayAdapter<QuestionStatus>{
     public View getView(final int position, View rowView, ViewGroup parent){
         QuestionStatus qs = getItem(position);
         if(rowView == null){
-            rowView = LayoutInflater.from(getContext()).inflate(R.layout.answer_list_item, parent,false);
+            rowView = LayoutInflater.from(getContext()).inflate(R.layout.answer_list_row_view, parent,false);
         }
 
         final TextView qText = (TextView) rowView.findViewById(R.id.questionAnsText_id);
