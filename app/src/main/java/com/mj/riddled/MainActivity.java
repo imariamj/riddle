@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
-import adapter.PuzzleAdapter;
+import adapter.QuizAdapter;
 import data.Category;
 import data.DummyData;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         final List<Category> categoryType = DummyData.getCategories();
         ListView puzzleList = (ListView) findViewById(R.id.list_view_id);
-        PuzzleAdapter adapter = new PuzzleAdapter(this, 0, categoryType);
+        QuizAdapter adapter = new QuizAdapter(this, 0, categoryType);
         puzzleList.setAdapter(adapter);
     }
 

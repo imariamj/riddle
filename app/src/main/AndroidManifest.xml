@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PuzzleStartActivity"
+            android:name=".QuizStartActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
         <activity

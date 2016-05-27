@@ -1,4 +1,5 @@
 package data;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import com.mj.riddled.R;
 import java.util.ArrayList;
@@ -429,7 +430,7 @@ public class DummyData {
             options54.add(new Option(1, "Johannes Gutenburg"));
             options54.add(new Option(2, "Benjamin Franklin"));
             options54.add(new Option(3, "Sir Isaac Newton"));
-            options54.add(new Option(4, "Martin Luther\n"));
+            options54.add(new Option(4, "Martin Luther"));
             QUESTION.add(new Question(54, "The first successful printing press was developed by this man.", getCategory(6), options54, options54.get(0)));
 
             List<Option> options55 = new ArrayList<Option>();
@@ -519,10 +520,9 @@ public class DummyData {
      * @param category
      * @return start quiz text
      */
-    public static String getCategoryDesc(Category category){
-        if(category != null){
-            return "How much do you know about\n"+ category.getName() +"?\n\nTest your knowledge with this quiz." +
-                    "";
+    public static String getCategoryDesc(Category category, Context context){
+        if(category != null && context != null){
+            return context.getString(R.string.start_quiz_text, category.getName());
         }
         return "";
 
