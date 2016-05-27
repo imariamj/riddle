@@ -2,6 +2,7 @@
 Google Jam Project
 
 View design mocs for the app at https://github.com/imariamj/riddle/wiki/Riddle-Mockups
+
 View data model design at https://github.com/imariamj/riddle/wiki/Data-Model
 
 Riddle is a simple quiz app that allows a user to choose from a list of categories to play quiz for.
