@@ -4,6 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="action_bar">8dp</dimen>
+    <dimen name="action_bar_text">20sp</dimen>
     <dimen name="quiz_start_detail_top_padding">60dp</dimen>
     <dimen name="question_text_margin_top">8dp</dimen>
     <dimen name="question_text_margin_left">8dp</dimen>

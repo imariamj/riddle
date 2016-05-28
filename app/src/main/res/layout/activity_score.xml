@@ -9,42 +9,42 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg4"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg4" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:id="@+id/score_count_id"
         style="@style/StartPuzzle"
-        android:gravity="center"
-        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textAlignment="center" />
 
     <ListView
+        android:id="@+id/correct_answers_lvID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/correct_answers_lvID"
-        android:layout_below="@id/score_count_id"
         android:layout_above="@+id/another_game_btnid"
+        android:layout_below="@id/score_count_id"
         android:paddingBottom="@dimen/answer_lv_padding_bottom"
         android:paddingTop="@dimen/answer_lv_padding_top">
 
     </ListView>
 
     <Button
+        android:id="@+id/another_game_btnid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/another_game_btnid"
-        android:text="Start another quiz"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginBottom="@dimen/start_another_button_layoutMarginBottom"
+        android:background="@drawable/rounded_button"
         android:paddingLeft="@dimen/start_another_button_paddingLeft"
         android:paddingRight="@dimen/start_another_button_paddingRight"
-        android:layout_gravity="center"
-        android:background="@drawable/rounded_button"/>
+        android:text="Start another quiz" />
 
 </RelativeLayout>

@@ -27,7 +27,7 @@ public class QuizStartActivity extends AppCompatActivity {
         if (bundle != null) {
             categoryId = bundle.getInt(Constants.CATEGORY_ID);
             Category category = DummyData.getCategory(categoryId);
-            if(category != null){
+            if (category != null) {
                 if (startPuzzleTextView != null) {
                     startPuzzleTextView.setText(DummyData.getCategoryDesc(category, this));
                 }
@@ -49,6 +49,7 @@ public class QuizStartActivity extends AppCompatActivity {
 
     /**
      * Start puzzle as per the given category id
+     *
      * @param categoryId
      */
     public void startPuzzle(int categoryId) {

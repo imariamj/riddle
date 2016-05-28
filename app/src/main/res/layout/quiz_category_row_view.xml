@@ -9,22 +9,19 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:scaleType="centerCrop"
-        />
-
+        android:scaleType="centerCrop" />
 
     <TextView
+        android:id="@+id/quiz_category_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text=""
-        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="@dimen/category_list_text_size"
-        android:background="#80000000"
-        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:background="@color/black2"
+        android:gravity="center"
         android:textColor="@android:color/white"
-        android:id="@+id/quiz_category_text"/>
+        android:textSize="@dimen/category_list_text_size"
+        android:textStyle="bold" />
 
 </RelativeLayout>

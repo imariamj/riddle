@@ -6,11 +6,11 @@
 
     <TextView
         android:id="@+id/questionAnsText_id"
+        style="@style/QuestionAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/question_mark"
-        android:text="Question answer"
-        style="@style/QuestionAnswer" />
+        android:text="Question answer" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,19 +19,19 @@
 
         <TextView
             android:id="@+id/CorrectAnswer_TVId"
-            android:text="Correct Answer"
+            style="@style/QuestionAnswer"
             android:layout_weight="1"
             android:drawableLeft="@drawable/tick"
-            android:textColor="@color/colorPrimaryDark"
-            style="@style/QuestionAnswer" />
+            android:text="Correct Answer"
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/selectedAnswer_id"
-            android:text="Selected Answer"
-            android:layout_weight="1"
-            android:textColor="@color/colorAccent"
             style="@style/QuestionAnswer"
+            android:layout_weight="1"
             android:drawableLeft="@drawable/cross"
+            android:text="Selected Answer"
+            android:textColor="@color/colorAccent"
             android:visibility="gone" />
 
     </LinearLayout>

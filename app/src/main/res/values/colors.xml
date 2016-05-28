@@ -14,4 +14,5 @@
     <color name="darkGrey">#727272</color>
     <color name="darkerGrey">#616161</color>
     <color name="transparent">#0000</color>
+    <color name="black2">#80000000</color>
 </resources>

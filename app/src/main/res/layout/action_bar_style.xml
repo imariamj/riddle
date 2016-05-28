@@ -3,7 +3,7 @@
     android:id="@+id/linearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center" >
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/imageIcon"
@@ -15,9 +15,9 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Riddle"
         android:paddingLeft="@dimen/action_bar"
-        android:textSize="20sp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="Riddle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/action_bar_text" />
 
 </LinearLayout>

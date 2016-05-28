@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
     android:background="@drawable/gradient_start"
+    android:clickable="true"
     tools:context=".QuizStartActivity">
 
     <TextView
@@ -13,12 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingTop="@dimen/quiz_start_detail_top_padding"
-        android:text="Quiz start details" />
+        android:paddingTop="@dimen/quiz_start_detail_top_padding" />
 
     <Button
-        style="@style/NextButton"
         android:id="@+id/start_puzzle_id"
+        style="@style/NextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Quiz" />
