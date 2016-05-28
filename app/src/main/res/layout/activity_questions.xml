@@ -20,10 +20,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/questionText_id"
-        android:padding="8dp"
-        android:textSize="24sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
+        android:padding="@dimen/question_text_padding"
+        android:textSize="@dimen/question_text_size"
+        android:layout_marginTop="@dimen/question_text_margin_top"
+        android:layout_marginLeft="@dimen/question_text_margin_left"
         android:layout_alignParentTop="true"
         android:text="Question 1: "
         style="@style/QuestionText"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/linear_layout_rb_marginLeft"
         android:layout_below="@id/questionText_id">
 
         <RadioGroup

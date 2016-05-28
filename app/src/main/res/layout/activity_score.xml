@@ -29,8 +29,8 @@
         android:id="@+id/correct_answers_lvID"
         android:layout_below="@id/score_count_id"
         android:layout_above="@+id/another_game_btnid"
-        android:paddingBottom="16dp"
-        android:paddingTop="16dp">
+        android:paddingBottom="@dimen/answer_lv_padding_bottom"
+        android:paddingTop="@dimen/answer_lv_padding_top">
 
     </ListView>
 
@@ -41,9 +41,9 @@
         android:text="Start another quiz"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
+        android:layout_marginBottom="@dimen/start_another_button_layoutMarginBottom"
+        android:paddingLeft="@dimen/start_another_button_paddingLeft"
+        android:paddingRight="@dimen/start_another_button_paddingRight"
         android:layout_gravity="center"
         android:background="@drawable/rounded_button"/>
 

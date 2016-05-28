@@ -3,4 +3,17 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="action_bar">8dp</dimen>
+    <dimen name="quiz_start_detail_top_padding">60dp</dimen>
+    <dimen name="question_text_margin_top">8dp</dimen>
+    <dimen name="question_text_margin_left">8dp</dimen>
+    <dimen name="question_text_size">24sp</dimen>
+    <dimen name="question_text_padding">8dp</dimen>
+    <dimen name="answer_lv_padding_bottom">16dp</dimen>
+    <dimen name="answer_lv_padding_top">16dp</dimen>
+    <dimen name="linear_layout_rb_marginLeft">10dp</dimen>
+    <dimen name="category_list_text_size">25sp</dimen>
+    <dimen name="start_another_button_paddingLeft">24dp</dimen>
+    <dimen name="start_another_button_paddingRight">24dp</dimen>
+    <dimen name="start_another_button_layoutMarginBottom">24dp</dimen>
 </resources>
