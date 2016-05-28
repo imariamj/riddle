@@ -9,4 +9,5 @@
     <string name="no_questions_in_cat">*There are no questions in this category*</string>
     <string name="start_quiz_text">How much do you know about\n %1$s ?\n\nTest your knowledge with this quiz.</string>
     <string name="next_question_button">Next Question</string>
+    <string name="start_another_quiz">Start another quiz</string>
 </resources>

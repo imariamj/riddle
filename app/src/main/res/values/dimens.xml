@@ -9,6 +9,7 @@
     <dimen name="question_text_margin_top">8dp</dimen>
     <dimen name="question_text_margin_left">8dp</dimen>
     <dimen name="question_text_size">24sp</dimen>
+    <dimen name="score_count_text_layoutMargin_top">32dp</dimen>
     <dimen name="question_text_padding">8dp</dimen>
     <dimen name="answer_lv_padding_bottom">16dp</dimen>
     <dimen name="answer_lv_padding_top">16dp</dimen>

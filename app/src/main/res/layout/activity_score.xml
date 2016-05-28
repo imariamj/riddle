@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/score_count_text_layoutMargin_top"
         android:gravity="center"
         android:textAlignment="center" />
 
@@ -33,7 +33,6 @@
         android:paddingTop="@dimen/answer_lv_padding_top">
 
     </ListView>
-
     <Button
         android:id="@+id/another_game_btnid"
         android:layout_width="wrap_content"
@@ -45,6 +44,6 @@
         android:background="@drawable/rounded_button"
         android:paddingLeft="@dimen/start_another_button_paddingLeft"
         android:paddingRight="@dimen/start_another_button_paddingRight"
-        android:text="Start another quiz" />
+        android:text="@string/start_another_quiz" />
 
 </RelativeLayout>
